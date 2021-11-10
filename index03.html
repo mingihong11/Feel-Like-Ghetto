@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Like Ghetto Photo Review</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(./img/01.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            
+        }
+        #wrap{
+            margin-top: 20px;
+        }
+        #header{
+            width: 1400px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: rgb(0, 0, 0);
+            position: relative;
+        }
+        #header ul{
+            text-align: center;
+            position: absolute;
+            top: 105px;
+            left: 350px;
+            font-family: "Cowboys 2.0";
+            font-weight: lighter;
+            letter-spacing: 3px;
+        }
+        #header li{
+            list-style: none;
+            float: left;
+            color: rgb(255, 255, 255);
+            margin-left: 40px;
+            margin-top: 10px;
+            font-size: 13pt;
+        }
+        #header li:hover{
+            color: rgb(231, 188, 47);
+        }
+        #logo{
+            width: 120px;
+            display: block;
+            margin: 0 auto;
+            padding-top: 25px;
+        }
+        #seach{
+            width: 1000px;
+            background-color: rgb(255, 255, 255);
+            height: 25px;
+            border: 3px solid rgb(190, 4, 4);
+            position: absolute;
+            top: 155px;
+            left: 200px;
+        }
+        
+        #seach img{
+            height: 20px;
+            width: 20px;
+            float: right;
+            padding-top: 2px;
+            padding-right: 5px;
+        }
+        #header p{
+            position: absolute;
+            top: 10px;
+            left: 1190px;
+            color: rgb(233, 204, 77);
+            text-align: right;
+            line-height: 25px;
+            font-family: "Cowboys 2.0";
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: 10pt;
+        }
+
+        #footer{
+            background-color: black;
+            width: 1400px;
+            height: 110px;
+            margin: 5px auto;
+            position: relative;
+        }
+        #seco{
+            font-weight: bold;
+            opacity: 0.15;
+            color: rgb(209, 209, 209);
+            position: absolute;
+            top: 70px;
+            left: 10px;
+            
+        }
+        #footer img{
+            padding-top: 20px;
+            padding-left: 70px;
+            float: left;
+        }
+        #footer p{
+            float: left;
+            color: white;
+            margin-top: 10px;
+            font-family: "Noto Sans KR";
+            font-weight: lighter;
+        }
+        #footer p:nth-child(3){
+            color: rgb(231, 152, 4);
+            font-weight: bold;
+            margin-left: 90px;
+        }
+        #footer p:nth-child(4){
+            margin-left: 35px;
+            color: rgb(211, 209, 209);
+        }
+        #footer p:nth-child(5){
+            color: rgb(231, 152, 4);
+            font-weight: bold;
+            margin-left: 60px;
+        }
+        #footer p:nth-child(6){
+            margin-left: 35px;
+            color: rgb(211, 209, 209);
+        }
+        #footer p:nth-child(7){
+            color: rgb(231, 152, 4);
+            font-weight: bold;
+            margin-left: 60px;
+        }
+        #footer p:nth-child(8){
+            margin-left: 35px;
+            color: rgb(211, 209, 209);
+        }
+        #footer p:nth-child(9){
+            color: rgb(231, 152, 4);
+            font-weight: bold;
+            margin-left: 60px;
+        }
+        #footer p:nth-child(10){
+            margin-left: 35px;
+            color: rgb(211, 209, 209);
+        }
+        a{text-decoration: none;}
+        #section2 a:hover{
+            opacity: 0.8;
+            text-decoration: whitesmoke;
+        }
+        #seach:hover{
+            color: rgb(236, 236, 236);
+        }
+
+        a{text-decoration: none;}
+        #a04{
+            position: absolute;
+            top: 190px;
+            left: 29px;
+            height: 1400px;
+            width: 200px;
+        }
+        #a03{
+            position: absolute;
+            top: 190px;
+            left: 1675px;
+            height: 1400px;
+            width: 200px;
+        }
+        #a05{
+            position: absolute;
+            color: white;
+            font-size: 40pt;
+            text-align: center;
+            top: 190px;
+            left: 29px;
+            height: 1400px;
+            width: 200px;
+            font-family: "Western Dead";
+        }
+        #a05 p{
+            margin-top: 20px;
+            color: rgb(255, 187, 0);
+        }
+        #a06{
+            position: absolute;
+            color: white;
+            font-size: 40pt;
+            text-align: center;
+            top: 190px;
+            left: 1675px;
+            height: 1400px;
+            width: 200px;
+            font-family: "Western Dead";
+        }
+        #a06 p{
+            margin-top: 50px;
+            color: rgb(255, 187, 0);
+        }
+        #a07{
+            position: absolute;
+            top: 190px;
+            left: 29px;
+            height: 1400px;
+            width: 200px;
+            background-color: black;
+            opacity: 0.3;
+        }
+        #a07:hover{
+            opacity: 0;
+            transition-duration: 0.4s;
+        }
+        #a08{
+            position: absolute;
+            top: 190px;
+            left: 1675px;
+            height: 1400px;
+            width: 200px;
+            background-color: black;
+            opacity: 0.3;
+        }
+    
+        #a08:hover{
+            opacity: 0;
+            transition-duration: 0.4s;}
+        #section1{
+            width: 1400px;
+            height: 700px;
+            margin: 10px auto;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        #section1 p{
+            line-height: 35px;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: 1px;
+        }
+        #section1 p:nth-child(1){
+            padding-top: 25px;
+            color: rgb(231, 152, 4);
+            font-size: 14pt;
+        }
+        #section1 p:nth-child(3){
+            font-size: 19pt;
+            padding-top: 15px
+        }
+        #section1 p:nth-child(4){
+            color: rgb(156, 8, 8);
+            font-size: 11pt;
+            line-height: 25px;
+        }
+        #section1 img{
+            width: 500px;
+            height: 500px;
+            padding-top: 25px;
+        }
+        #section2{
+            text-align: center;
+            background-color: black;
+            width: 1400px;
+            overflow: hidden;
+            margin: 20px auto;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: 1px;
+            font-size: 10pt;
+        }
+        #section2{
+            line-height: 40px;
+            padding-bottom: 50px;
+        }
+        #review{
+            width: 500px;
+            margin: 30px auto;
+            display: block;
+            border-radius: 20px;
+            border: rgb(177, 28, 28) solid 5px;
+        }
+        .model{
+            width: 500px;
+            height: 770px;
+            margin: 40px auto;
+            display: block;
+            border-radius: 20px;
+            border: rgb(177, 28, 28) solid 5px;
+        }
+        #section2 img:nth-child(1){
+            margin-top: 50px;
+        }
+        span{
+            color: rgb(231, 152, 4);
+        }
+        #section2 img:hover{
+            opacity: 0.7;
+            transition-duration: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <a href="./index01.html" target="_blank"><img src="./img/Logo2.png" id="logo"></a>
+            <ul>
+                <a href="#"><li>Outer</li></a>
+                <a href="#"><li>Top</li></a>
+                <a href="#"><li>Bottom</li></a>
+                <a href="#"><li>Shoes</li></a>
+                <a href="#"><li>Bag</li></a>
+                <a href="#"><li>Accessory</li></a>
+            </ul>
+            <div id="seach">
+                　Search...
+
+                <a href="#"><img src="./img/icon.png"></a>
+            </div>
+            <a href="#"><p>
+                Login　
+                Sign　
+                Cart
+            </p>
+        </a>
+        </div>
+        <div id="section1">
+            <P>Best Photo Review</P>
+            <img src="./img/review6.jpeg">
+            <P>8e**uk</P>
+            <P>Model 161cm, 46kg</P>
+        </div>
+        <div id="section2">
+            <img src="./img/Logo2.png">
+            <img src="./img/insta3.jpeg" id="review">
+            <img src="./img/insta1.jpeg" class="model">
+            <img src="./img/insta2.jpeg" class="model">
+            <P>Feel Like Ghetto  
+                <span>Instagram 계정을 태그</span>하여<br>
+                <span>피드</span> 혹은 <span>스토리</span>로 포토후기 시<br>
+                <span>적립금 4,000원</span> 지급됩니다.</P>
+        </div>
+        <div id="footer">
+            <p id="seco">
+                Vintage Co.
+                Second Hand Vintage Co.　
+                Second Hand Vintage Co.　
+                Second Hand Vintage Co.　
+                Second Hand Vintage Co.　
+                
+                Second Hand Vintage Co.
+                Second Hand Vintage Co.　
+            </p>
+            <a href="./index04.html" target="_blank"><img src="./img/Logo2.png"></a>
+            <p> Instagram</p>
+            <p> Feel_like_Ghetto</p>
+            <p> CEO </p>
+            <p> Mingi-Hong </p>
+            <P> Adress </P>
+            <P> Adress 32, Beoman-ro <br>
+                95beon-gil, Bucheon-si,<br>
+                Republic of Korea</P>
+            <p> TEL </p>
+            <P> 02)1234-5678</P> 
+            
+        </div>
+    </div>
+    <a href="#"><div id="wit1"></div></a>
+    <a href="#"><div id="wit2"></div></a>
+    <a href="#"> <div id="wit3"></div></a>
+    <a href="#"><div id="wit4"></div></a>
+    <a href="#"><div id="wit5"></div></a>
+    <a href="#"><div id="wit6"></div></a>
+    <a href="#"><div id="wit7"></div></a>
+    <a href="#"><div id="wit8"></div></a>
+    <img src="./img/03.jpg" id="a03">
+    <img src="./img/04.jpg" id="a04">
+    <div id="a05">
+        <p>5<br>0<br>0<br><br>
+        O<br>U<br>T<br>F<br>I<br>T<br>S<br><br>
+        E<br>V<br>E<br>R<br>Y<br><br>
+        W<br>E<br>E<br>K</p>
+    </div>
+    <div id="a06">
+        <p>S<br>E<br>C<br>O<br>
+        N<br>D<br>H<br>A<br>N<br>D<br><br>V<br>I<br>
+        N<br>T<br>A<br>G<br>E<br><br>
+        C<br>O</p>
+    </div>
+    <a href="#"><div id="a07"></div></a>
+    <a href="#"><div id="a08"></div></a>
+    <a href="#"><div id="b01"></div></a>
+    <a href="#"><div id="b02"></div></a>
+    <a href="#"><div id="b03"></div></a>
+</body>
+</html>
